@@ -14,15 +14,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    User newUser = new User("Jin Daat", "testing", 1, false);
+
     //Method to change text when follow button is clicked
     public void followPerson(View view){
-        Button button = findViewById(R.id.follow);
-        String btnText = button.getText().toString();
-        if (btnText.equals("Follow")){
-            button.setText("Unfollow");
+        Button followBtn = findViewById(R.id.follow);
+
+        if (!newUser.followed){
+            followBtn.setText("Unfollow");
+            newUser.followed = true;
         }
         else{
-            button.setText("Follow");
+            followBtn.setText("Follow");
+            newUser.followed = false;
         }
     }
 

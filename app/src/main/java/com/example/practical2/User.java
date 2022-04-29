@@ -5,4 +5,11 @@ public class User {
     String description;
     int id;
     boolean followed;
+//    Constructor
+    public User (String userName, String userDesc, int userId, boolean userFollow){
+        name = userName;
+        description = userDesc;
+        id = userId;
+        followed = userFollow;
+    }
 }
