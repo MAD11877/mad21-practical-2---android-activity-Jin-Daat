@@ -7,6 +7,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.time.Duration;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -40,10 +43,12 @@ public class MainActivity extends AppCompatActivity {
                 if (!newUser.followed){
                     clickFollowBtn.setText("Unfollow");
                     newUser.followed = true;
+                    Toast.makeText(getApplicationContext(), "Followed", Toast.LENGTH_SHORT).show();
                 }
                 else{
                     clickFollowBtn.setText("Follow");
                     newUser.followed = false;
+                    Toast.makeText(getApplicationContext(), "Unfollowed", Toast.LENGTH_SHORT).show();
                 }
             }
 
