@@ -74,8 +74,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userDesc"
-        android:onClick="followPerson"/>
+        app:layout_constraintTop_toBottomOf="@+id/userDesc" />
 
     <Button
         android:id="@+id/message"
